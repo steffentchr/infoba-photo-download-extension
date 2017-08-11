@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Infoba Photo Download",
+  "description": "Easily download photos from an Infoba gallery or collection.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www2.infoba.dk/FO/Picture*"],
+      "css": [],
+      "js": ["browser.js", "jquery-3.2.1.min.js", "code.js"]
+    }
+  ],
+
+  "permissions": [
+    "tabs", "https://www2.infoba.dk/*"
+  ]
+}
